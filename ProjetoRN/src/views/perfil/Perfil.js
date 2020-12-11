@@ -21,14 +21,54 @@ class perfil extends Component {
             userArr: [ ]
         };
     }
+    //componentDidMount é um HOOK têm q ser chamado dps do construtor, bom para subscrições
     componentDidMount(){
         this.unsubscribe = this.firestoreREF.onSnapshot(this.getCollection);
     }
+    //é invocado imediatamente antes que um componente seja desmontado e destruído / faz uma limpeza boa 
     componentWillUnmount(){
         this.unsubscribe();
     }
 
     getCollection =  (querySnapshot) => {
-        const userArr = [ ]
+        const userArr = [ ];
+        //querrySnapshot - possui os domentsSnapshot, chamados pela query, usando um foreach
+        querySnapshot.forEach((res) => {
+            const { Idade, Nome, RM, Série, Técnico} = res.data();
+            userArr.push({
+                key: res.id,
+                res,
+                RM,
+                Nome,
+                Idade,
+                Série,
+                Técnico,
+            });
+         });
+
+         this.setState({
+             userArr,
+             isLoading: false,
+         });
+    }     
+        //renderiza elementos
+         render( ){
+                if(this.state.isLoading){
+                    return(
+                        <View style={style.carregando}>
+                        </View>
+                    )
+         }
+
+         return(
+             <View>
+                    <Button>
+                        
+                    </Button>
+
+
+             </View>
+         )
+
     }
 }
