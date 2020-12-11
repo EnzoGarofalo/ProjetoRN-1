@@ -5,7 +5,7 @@ import item from '../views/item/item';
 
 const Lista = ({data}) => {
 
-    const [iitem, setItem] = useState(data);
+    const [ item, setItem] = useState(data);
 
     return(
         <View style={estiloLista.container}>
