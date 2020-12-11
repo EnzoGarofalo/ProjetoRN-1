@@ -4,19 +4,30 @@ import estiloInicial from './estiloInicial';
 import { Text, View, TouchableOpacity} from 'react-native';
 
 function inicial ({ navigation }){
-    return(
         
-        const abrirPerfil = ( ) => {
+    const abrirPerfil = ( ) => {
             navigation.navigate('perfil');
         }
+     
+     const abrirItem = () => {
+         navigation.navigate('item');
+     }   
 
-    )
+     return(
+
+        <View style={estiloInicial.container}>
+            <View style={estiloInicial.borda}>
+
+                <TouchableOpacity style={estiloInicial.botaoContainer} onPress={abrirPerfil}>
+                        <Text style={estiloInicial.botaoTexto}>Perfil</Text>
+                </TouchableOpacity>
+
+                <TouchableOpacity style={estiloInicial.botaoContainer} onPress={abrirItem}>
+                        <Text style={estiloInicial.botaoTexto}>Item</Text>
+                </TouchableOpacity>
+
+            </View>
+        </View>
+     )
 }
-
-
-
-
-
-
 export default inicial;
-
