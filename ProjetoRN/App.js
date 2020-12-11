@@ -1,8 +1,8 @@
 import React from 'react';
 // dependencias de navegação
-import 'react-native-gesture-handler';
 import { NavigationContainer } from '@react-navigation/native';
 import { createStackNavigator } from '@react-navigation/stack';
+import 'react-native-gesture-handler';
 
 //Dependencias de Screens
 import inicial from './src/views/inicial/inicial.js';
