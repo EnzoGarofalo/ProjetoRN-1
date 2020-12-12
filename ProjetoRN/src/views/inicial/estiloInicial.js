@@ -20,7 +20,7 @@ const estiloInicial = StyleSheet.create({
       borderRadius: 5,
       height: 40,
       borderWidth: 2,
-      borderColor: '#e8f2e9',
+      borderColor: '#000',
       justifyContent: 'center',
       alignItems: 'center',
    },
@@ -31,7 +31,7 @@ const estiloInicial = StyleSheet.create({
 
    botaoTexto: {
       fontSize: 18,
-      color: '#fff',
+      color: '#000',
       fontWeight: 'bold',
    }
 });
