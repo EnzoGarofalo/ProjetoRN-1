@@ -13,7 +13,7 @@ const configFirebase = {
     measurementId: "G-QYJE5KDBJV",
 };
 //inicializa o fb
-firebase.initializeApp(firebaseConfig);
+firebase.initializeApp(configFirebase);
 firebase.analytics();
 firebase.firestore();
 
