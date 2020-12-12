@@ -5,7 +5,7 @@ import { ListItem } from "react-native-elements";
 import firebase from "../../firebase/conexaoFB";
 
 //Gerando uma classe filha / objeto pré construido
-class perfil extends Component {
+class Perfil extends Component {
     voltar({ navigation }) {
         () => {
             navigation.goBack();
@@ -62,13 +62,50 @@ class perfil extends Component {
 
          return(
              <View>
-                    <Button>
-                        
-                    </Button>
-
-
-             </View>
+                    <Button 
+                        title="Adicionar Perfil"
+                        onPress={() => this.props.navigation.navigate('criarPerfil')}
+                        color="#841584"
+                        accessibilityLabel="Learn more about this purple button"
+                    />
+         
+                     <ScrollView style={style.container}>
+                        {
+                            this.state.userArr.map((item, i) => { 
+                                return(
+                                    <ListItem
+                                        key={i}
+                                        chevron
+                                        bottomDivider
+                                        title={item.Nome}
+                                        subtitle={item.Série}
+                                        onPress={() =>{
+                                            this.props.navigation.navigate('consultaPerfil', {
+                                                userKey: item.key
+                                            });
+                                        }}/>
+                                );
+                            })
+                        }
+                    </ScrollView>
+            </View>
          )
-
     }
 }
+const style= StyleSheet.create({
+    container: {
+     flex: 1,
+     paddingBottom: 22
+    },
+    carregado: {
+      left: 0,
+      right: 0,
+      top: 0,
+      bottom: 0,
+      position: 'absolute',
+      alignItems: 'center',
+      justifyContent: 'center'
+    }
+})
+  
+export default Perfil;
