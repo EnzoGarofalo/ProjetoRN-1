@@ -95,7 +95,8 @@ class Perfil extends Component {
 const style= StyleSheet.create({
     container: {
      flex: 1,
-     paddingBottom: 22
+     paddingBottom: 22,
+     backgroundColor: '#297373'
     },
     carregado: {
       left: 0,
