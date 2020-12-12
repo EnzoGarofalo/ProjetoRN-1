@@ -15,5 +15,6 @@ const configFirebase = {
 //inicializa o fb
 firebase.initializeApp(firebaseConfig);
 firebase.analytics();
+firebase.firestore();
 
 export default firebase;
