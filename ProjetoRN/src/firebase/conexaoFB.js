@@ -1,6 +1,6 @@
 // dependencias  do banco de dados
 import firebase from 'firebase';
-import 'firebase/firestone';
+import 'firebase/firestore';
 
 //Config. Firebase
 const configFirebase = {
