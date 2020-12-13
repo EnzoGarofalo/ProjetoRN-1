@@ -36,7 +36,74 @@ class criarPerfil extends Component{
                 RM:  this.state.RM,
                 Técnico: this.state.Técnico,
                 Série: this.state.Série
-            }).then((ReadableStreamReader))    
+            }).then((res) => {
+            this.setState({
+                Nome:  '',
+                Idade:  ' ',
+                RM:  ' ',
+                Técnico: ' ',
+                Série: ' ',
+                isLoading: false,
+            });
+            this.props.navigation.navigate('Perfil')
+            })
+            .catch((err) => {
+                console.error("Error found: ", err);
+                this.setState({
+                  isLoading: false,   
+                });
+            });
+        }
+    }
+
+    render(){
+        if(this.state.isLoading){
+            return(
+                <ScrollView style={styles.container}>
+                        <View style={styles.inputGroup}>
+                            <TextInput 
+                                    placeholder={'Nome'}
+                                    value={this.state.Nome}
+                                    onChangeText={(val) => this.inputValueUpdate(val, 'Nome')}
+                             />       
+                        </View>
+                        <View style={styles.inputGroup}>
+                            <TextInput 
+                                    placeholder={'Idade'}
+                                    value={this.state.Idade}
+                                    onChangeText={(val) => this.inputValueUpdate(val, 'Idade')}
+                             />       
+                        </View>
+                        <View style={styles.inputGroup}>
+                            <TextInput 
+                                    placeholder={'RM'}
+                                    value={this.state.RM}
+                                    onChangeText={(val) => this.inputValueUpdate(val, 'RM')}
+                             />       
+                        </View>
+                        <View style={styles.inputGroup}>
+                            <TextInput 
+                                    placeholder={'Técnico'}
+                                    value={this.state.Técnico}
+                                    onChangeText={(val) => this.inputValueUpdate(val, 'Técnico')}
+                             />       
+                        </View>
+                        <View style={styles.inputGroup}>
+                            <TextInput 
+                                    placeholder={'Série'}
+                                    value={this.state.Série}
+                                    onChangeText={(val) => this.inputValueUpdate(val, 'Série')}
+                             />       
+                        </View>
+                        <View style={styles.button}>
+                            <Button
+                                    title='Adicionar Perfil'
+                                    onPress={() => this.storeUser()} 
+                                    color="#19AC52"
+                             />
+                        </View>
+                </ScrollView>
+            )
         }
     }
 }
