@@ -6,7 +6,7 @@ import firebase from "../../firebase/conexaoFB";
 
 //Gerando uma classe filha / objeto pré construido
 class Perfil extends Component {
-    voltar({ navigation }) {
+    PerfilVoltar({ navigation }) {
         () => {
             navigation.goBack();
         };
@@ -34,7 +34,7 @@ class Perfil extends Component {
         const userArr = [ ];
         //querrySnapshot - possui os domentsSnapshot, chamados pela query, usando um foreach
         querySnapshot.forEach((res) => {
-            const { Idade, Nome, RM, Série, Técnico} = res.data();
+            const {  RM, Nome, Idade, Série, Técnico} = res.data();
             userArr.push({
                 key: res.id,
                 res,
@@ -71,7 +71,7 @@ class Perfil extends Component {
          
                      <ScrollView style={style.container}>
                         {
-                            this.state.userArr.map((item, i) => { 
+                            this.state.userArr.map((item,  i) => { 
                                 return(
                                     <ListItem
                                         key={i}
@@ -80,7 +80,7 @@ class Perfil extends Component {
                                         title={item.Nome}
                                         subtitle={item.Série}
                                         onPress={() =>{
-                                            this.props.navigation.navigate('consultaPerfil', {
+                                            this.props.navigation.navigate('consultaPerfil' , {
                                                 userKey: item.key
                                             });
                                         }}/>
@@ -89,16 +89,15 @@ class Perfil extends Component {
                         }
                     </ScrollView>
             </View>
-         )
+         );
     }
 }
 const style= StyleSheet.create({
     container: {
      flex: 1,
-     paddingBottom: 22,
      backgroundColor: '#297373'
     },
-    carregado: {
+    carregando: {
       left: 0,
       right: 0,
       top: 0,

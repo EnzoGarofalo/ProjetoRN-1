@@ -7,8 +7,8 @@ import 'react-native-gesture-handler';
 //Dependencias de Screens
 import inicial from './src/views/inicial/inicial';
 import item from './src/views/item/item';
-import perfil from './src/views/perfil/Perfil';
-import consultarPerfil from './src/views/perfil/consultaPerfil';
+import Perfil from './src/views/perfil/Perfil';
+import consultaPerfil from './src/views/perfil/consultaPerfil';
 import criarPerfil from './src/views/perfil/criarPerfil';
 
 // Fornece um caminho para o seu app transitar entre telas, cada nova tela é colocada no topo da pilha
@@ -21,8 +21,8 @@ export default function App() {
             <Stack.Navigator>
                 <Stack.Screen name="inicial" component={inicial}/>
                 <Stack.Screen name="item" component={item}/>
-                <Stack.Screen name="perfil" component={perfil}/>
-                <Stack.Screen name="consultarPerfil" component={consultarPerfil}/>
+                <Stack.Screen name="Perfil" component={Perfil}/>
+                <Stack.Screen name="consultarPerfil" component={consultaPerfil}/>
                 <Stack.Screen name="criarPerfil" component={criarPerfil}/> 
             </Stack.Navigator>
     </NavigationContainer>

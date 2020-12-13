@@ -2,12 +2,13 @@ import { StyleSheet } from 'react-native';
 
 const estiloLista = StyleSheet.create({
 
-    areaItens: {
+    container: {
         flex: 1,
-        backgroundColor: '#92afd7',
+        backgroundColor: '#FB3640',
+        color: '#fff'
     },
 
-    itemTitulo: {
+    titulo: {
         height: 40,
         fontSize: 18,
         textAlign: 'center',
@@ -15,15 +16,12 @@ const estiloLista = StyleSheet.create({
         paddingTop: 15,
     },
 
-    itemSubtitulo: {
+    autor: {
         fontSize: 16,
         textAlign: 'center',
+        paddingBottom: 15,
     },
 
-    itemFoto: {
-        height: 300,
-        marginBottom: 20,
-    }
 
 });
 
