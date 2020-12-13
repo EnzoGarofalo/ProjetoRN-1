@@ -1,4 +1,4 @@
-import { Component } from "react"
+
 import React, { Component} from 'react';
 import { Alert, Button, StyleSheet, TextInput, ScrollView, ActivityIndicator, View } from 'react-native';
 import firebase from '../../firebase/conexaoFB';

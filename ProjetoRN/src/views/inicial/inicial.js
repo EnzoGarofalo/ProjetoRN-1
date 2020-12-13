@@ -6,7 +6,7 @@ import { Text, View, TouchableOpacity} from 'react-native';
 function inicial ({ navigation }){
         
     const abrirPerfil = ( ) => {
-            navigation.navigate('perfil');
+            navigation.navigate('Perfil');
         }
      
      const abrirItem = () => {
