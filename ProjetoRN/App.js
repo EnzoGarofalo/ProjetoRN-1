@@ -22,8 +22,8 @@ export default function App() {
                 <Stack.Screen name="inicial" component={inicial}/>
                 <Stack.Screen name="item" component={item}/>
                 <Stack.Screen name="perfil" component={perfil}/>
-                {/*<Stack.Screen name="consultar Perfil" component={consultarPerfil}/>
-                <Stack.Screen name="criar Perfil" component={criarPerfil}/> */}
+                <Stack.Screen name="consultar Perfil" component={consultarPerfil}/>
+                <Stack.Screen name="criar Perfil" component={criarPerfil}/> 
             </Stack.Navigator>
     </NavigationContainer>
     );
