@@ -5,7 +5,8 @@ const estiloInicial = StyleSheet.create({
       flex: 1,
       justifyContent: 'center',
       alignItems: 'center',     
-   },
+      backgroundColor: '#00171F',
+       },
 
    fundo: {
        width: '100%',
@@ -20,7 +21,8 @@ const estiloInicial = StyleSheet.create({
       borderRadius: 5,
       height: 40,
       borderWidth: 2,
-      borderColor: '#000',
+      padding: 40,
+      borderColor: '#DCE0D9',
       justifyContent: 'center',
       alignItems: 'center',
    },
@@ -31,7 +33,7 @@ const estiloInicial = StyleSheet.create({
 
    botaoTexto: {
       fontSize: 18,
-      color: '#000',
+      color: '#DCE0D9',
       fontWeight: 'bold',
    }
 });

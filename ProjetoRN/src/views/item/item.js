@@ -18,16 +18,19 @@ function item ({ navigation }){
     const voltar = () => {
         navigation.goBack();
     }
-<View style={estiloItem.container}>
 
-    <FlatList 
-        showsHorizontalScrollIndicator={false}
-        keyExtractor= {(item) => item.id}
-        data={item}
-        renderItem= {({item}) => <Lista data={item}/>}
-    />
+    return(
+    <View style={estiloItem.container}>
+
+        <FlatList 
+            showsHorizontalScrollIndicator={false}
+            keyExtractor= {(item) => item.id}
+            data={item}
+            renderItem= {({item}) => <Lista data={item}/>}
+        />
     
-</View>
+    </View>
+    )
 }
 
 export default item;
