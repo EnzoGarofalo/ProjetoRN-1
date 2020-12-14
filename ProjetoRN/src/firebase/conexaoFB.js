@@ -3,17 +3,17 @@ import firebase from 'firebase';
 import 'firebase/firestore';
 
 //Config. Firebase
-const configFirebase = {
-    apiKey: "AIzaSyC66Z6POaPqAHtgpRy3R6-V6FOSanNGqqw",
-    authDomain: "projetorn-fb-f06c2.firebaseapp.com",
-    projectId: "projetorn-fb-f06c2",
-    storageBucket: "projetorn-fb-f06c2.appspot.com",
-    messagingSenderId: "969232692896",
-    appId: "1:969232692896:web:4c76f817650bd841127bc5",
-    measurementId: "G-QYJE5KDBJV",
+const firebaseConfig = {
+    apiKey: "AIzaSyCcFjHQ_smWDcOm6_OFSUKfbm9kKAPG0CQ",
+    authDomain: "projetorn-final.firebaseapp.com",
+    projectId: "projetorn-final",
+    storageBucket: "projetorn-final.appspot.com",
+    messagingSenderId: "79746907970",
+    appId: "1:79746907970:web:53c64bd818ebc7835912db",
+    measurementId: "G-VBK81SSRMD"
 };
 //inicializa o fb
-firebase.initializeApp(configFirebase);
+firebase.initializeApp(firebaseConfig );
 firebase.analytics();
 firebase.firestore();
 

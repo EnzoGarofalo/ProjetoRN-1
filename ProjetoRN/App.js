@@ -22,7 +22,7 @@ export default function App() {
                 <Stack.Screen name="inicial" component={inicial}/>
                 <Stack.Screen name="item" component={item}/>
                 <Stack.Screen name="Perfil" component={Perfil}/>
-                <Stack.Screen name="consultarPerfil" component={consultaPerfil}/>
+                <Stack.Screen name="consultaPerfil" component={consultaPerfil}/>
                 <Stack.Screen name="criarPerfil" component={criarPerfil}/> 
             </Stack.Navigator>
     </NavigationContainer>

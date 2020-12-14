@@ -68,7 +68,7 @@ class criarPerfil extends Component{
                 <ScrollView style={styles.container}>
                         <View style={styles.inputGroup}>
                             <TextInput 
-                                    placeholder={'Nome'}
+                                    placeholder={'nome'}
                                     value={this.state.Nome}
                                     onChangeText={(val) => this.inputValueUpdate(val, 'Nome')}
                              />       
@@ -115,11 +115,14 @@ class criarPerfil extends Component{
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    padding: 35
+    padding: 35,
+    backgroundColor: '#00171F',
+    color: '#fff',
+    fontSize: 15
   },
   inputGroup: {
     flex: 1,
-    padding: 0,
+    padding: 25,
     marginBottom: 15,
     borderBottomWidth: 1,
     borderBottomColor: '#cccccc',
@@ -131,7 +134,7 @@ const styles = StyleSheet.create({
     bottom: 0,
     position: 'absolute',
     alignItems: 'center',
-    justifyContent: 'center'
+    justifyContent: 'center',
   }
 })
 
