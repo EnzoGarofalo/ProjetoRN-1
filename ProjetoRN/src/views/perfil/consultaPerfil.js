@@ -156,14 +156,14 @@ class consultaPerfil extends Component {
                     <Button
                         title="Update"
                         onPress={() => this.updateUser()}
-                        color="#19AC52"
+                        color="#FF7F11"
                     />
                 </View>
                 <View>
                     <Button
                         title="Delete"
                         onPress={() => this.deleteUser()}
-                        color="#ff0000"
+                        color="#B80C09"
                     />
                 </View>
             </ScrollView>

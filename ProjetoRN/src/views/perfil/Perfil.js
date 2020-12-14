@@ -84,7 +84,7 @@ class Perfil extends Component {
                     <Button 
                         title="Adicionar Perfil"
                         onPress={() => this.props.navigation.navigate('criarPerfil')}
-                        color="#841584"
+                        color="#064789"
                         accessibilityLabel="Learn more about this purple button"
                     />
             </View>
