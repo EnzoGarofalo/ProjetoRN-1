@@ -34,15 +34,15 @@ class Perfil extends Component {
         const userArr = [ ];
         //querrySnapshot - possui os domentsSnapshot, chamados pela query, usando um foreach
         querySnapshot.forEach((res) => {
-            const {  RM, Nome, Idade, Série, Técnico} = res.data();
+            const {  nome, idade,  tecnico, rm, sala} = res.data();
             userArr.push({
                 key: res.id,
                 res,
-                RM,
-                Nome,
-                Idade,
-                Série,
-                Técnico,
+                nome,
+                idade,
+                tecnico,
+                rm,
+                sala,
             });
          });
 
@@ -77,8 +77,8 @@ class Perfil extends Component {
                                         key={i}
                                         chevron
                                         bottomDivider
-                                        title={item.Nome}
-                                        subtitle={item.Série}
+                                        title={item.nome}
+                                        subtitle={item.tecnico}
                                         onPress={() =>{
                                             this.props.navigation.navigate('consultaPerfil' , {
                                                 userKey: item.key

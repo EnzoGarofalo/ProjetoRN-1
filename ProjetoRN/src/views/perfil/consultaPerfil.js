@@ -55,7 +55,7 @@ class consultaPerfil extends Component {
             sala: this.state.sala
         }).then((docRef) => {
           this.setState({
-            key: '',
+            key: ' ',
             nome: ' ',
             idade: ' ',
             tecnico: ' ',
@@ -93,7 +93,7 @@ class consultaPerfil extends Component {
           <ScrollView style={styles.container}>
             <View style={styles.inputGroup}>
                             <TextInput 
-                                    placeholder={'Nome'}
+                                    placeholder={'nome'}
                                     value={this.state.nome}
                                     onChangeText={(val) => this.inputValueUpdate(val, 'nome')}
                              />       
@@ -101,27 +101,27 @@ class consultaPerfil extends Component {
                         <View style={styles.inputGroup}>
                             <TextInput 
                                     placeholder={'idade'}
-                                    value={this.state.Idade}
+                                    value={this.state.idade}
                                     onChangeText={(val) => this.inputValueUpdate(val, 'idade')}
                              />       
                         </View>
                         <View style={styles.inputGroup}>
                             <TextInput 
-                                    placeholder={'RM'}
+                                    placeholder={'rm'}
                                     value={this.state.rm}
                                     onChangeText={(val) => this.inputValueUpdate(val, 'rm')}
                              />       
                         </View>
                         <View style={styles.inputGroup}>
                             <TextInput 
-                                    placeholder={'Técnico'}
+                                    placeholder={'tecnico'}
                                     value={this.state.tecnico}
                                     onChangeText={(val) => this.inputValueUpdate(val, 'tecnico')}
                              />       
                         </View>
                         <View style={styles.inputGroup}>
                             <TextInput 
-                                    placeholder={'Sala'}
+                                    placeholder={'sala'}
                                     value={this.state.sala}
                                     onChangeText={(val) => this.inputValueUpdate(val, 'sala')}
                              />       
