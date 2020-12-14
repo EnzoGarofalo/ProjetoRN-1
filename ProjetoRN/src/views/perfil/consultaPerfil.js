@@ -7,12 +7,12 @@ class consultaPerfil extends Component {
     constructor() {
         super();
         this.state = {
-         Nome: ' ',
-         Idade: ' ',
-         Técnico: ' ',
-         RM: ' ',
-         Série: ' ',
-          isLoading: true
+         nome: ' ',
+         idade: ' ',
+         tecnico: ' ',
+         rm: ' ',
+         sala: ' ',
+        iisLoading: true
         };
       }
      
@@ -23,11 +23,11 @@ class consultaPerfil extends Component {
             const user = res.data();
             this.setState({
               key: res.id,
-              Nome: user.Nome,
-              Idade: user.Idade,
-              Técnico: user.Técnico,
-              RM: user.RM,
-              Série: user.Série,
+              nome: user.nome,
+              idade: user.idade,
+              tecnico: user.tecnico,
+              rm: user.rm,
+              sala: user.sala,
               isLoading: false
             });
           } else {
@@ -48,19 +48,19 @@ class consultaPerfil extends Component {
         });
         const updateDBRef = firebase.firestore().collection('Alunos').doc(this.state.key);
         updateDBRef.set({
-            Nome:  this.state.Nome,
-            Idade:  this.state.Idade,
-            RM:  this.state.RM,
-            Técnico: this.state.Técnico,
-            Série: this.state.Série
+            nome:  this.state.nome,
+            idade:  this.state.idade,
+            rm:  this.state.rm,
+            tecnico: this.state.tecnico,
+            sala: this.state.sala
         }).then((docRef) => {
           this.setState({
             key: '',
-            Nome:  '',
-            Idade:  ' ',
-            RM:  ' ',
-            Técnico: ' ',
-            Série: ' ',
+            nome: ' ',
+            idade: ' ',
+            tecnico: ' ',
+            rm: ' ',
+            sala: ' ',
             isLoading: false,
           });
           this.props.navigation.navigate('Perfil');
@@ -94,36 +94,36 @@ class consultaPerfil extends Component {
             <View style={styles.inputGroup}>
                             <TextInput 
                                     placeholder={'Nome'}
-                                    value={this.state.Nome}
-                                    onChangeText={(val) => this.inputValueUpdate(val, 'Nome')}
+                                    value={this.state.nome}
+                                    onChangeText={(val) => this.inputValueUpdate(val, 'nome')}
                              />       
                         </View>
                         <View style={styles.inputGroup}>
                             <TextInput 
-                                    placeholder={'Idade'}
+                                    placeholder={'idade'}
                                     value={this.state.Idade}
-                                    onChangeText={(val) => this.inputValueUpdate(val, 'Idade')}
+                                    onChangeText={(val) => this.inputValueUpdate(val, 'idade')}
                              />       
                         </View>
                         <View style={styles.inputGroup}>
                             <TextInput 
                                     placeholder={'RM'}
-                                    value={this.state.RM}
-                                    onChangeText={(val) => this.inputValueUpdate(val, 'RM')}
+                                    value={this.state.rm}
+                                    onChangeText={(val) => this.inputValueUpdate(val, 'rm')}
                              />       
                         </View>
                         <View style={styles.inputGroup}>
                             <TextInput 
                                     placeholder={'Técnico'}
-                                    value={this.state.Técnico}
-                                    onChangeText={(val) => this.inputValueUpdate(val, 'Técnico')}
+                                    value={this.state.tecnico}
+                                    onChangeText={(val) => this.inputValueUpdate(val, 'tecnico')}
                              />       
                         </View>
                         <View style={styles.inputGroup}>
                             <TextInput 
-                                    placeholder={'Série'}
-                                    value={this.state.Série}
-                                    onChangeText={(val) => this.inputValueUpdate(val, 'Série')}
+                                    placeholder={'Sala'}
+                                    value={this.state.sala}
+                                    onChangeText={(val) => this.inputValueUpdate(val, 'sala')}
                              />       
                         </View>
                         <View style={styles.button}>
