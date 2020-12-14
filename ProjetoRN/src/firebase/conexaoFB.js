@@ -13,7 +13,7 @@ const firebaseConfig = {
     measurementId: "G-VBK81SSRMD"
 };
 //inicializa o fb
-firebase.initializeApp(firebaseConfig );
+firebase.initializeApp(firebaseConfig);
 firebase.analytics();
 firebase.firestore();
 
