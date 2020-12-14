@@ -126,13 +126,6 @@ class consultaPerfil extends Component {
                                     onChangeText={(val) => this.inputValueUpdate(val, 'sala')}
                              />       
                         </View>
-                        <View style={styles.button}>
-                            <Button
-                                    title='Adicionar Perfil'
-                                    onPress={() => this.storeUser()} 
-                                    color="#19AC52"
-                             />
-                        </View>
             <View style={styles.button}>
               <Button
                 title='Update'

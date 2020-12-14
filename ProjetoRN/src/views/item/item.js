@@ -12,6 +12,12 @@ function item ({ navigation }){
             titulo: '25 grandes gênios da humanidade',
             autor: 'Salvador Nogueira',
             descricao: 'Um livro maneiro :)'
+        },
+        {
+            id: '2',
+            titulo: 'Atlas do Corpo Humano',
+            autor: 'Tim Maia',
+            descricao: 'Musicas boas'
         }
     ]);
     

@@ -21,10 +21,7 @@ function inicial ({ navigation }){
                 <TouchableOpacity style={estiloInicial.botaoContainer} onPress={abrirPerfil}>
                         <Text style={estiloInicial.botaoTexto}>Perfil</Text>
                 </TouchableOpacity>
-
-                <TouchableOpacity style={estiloInicial.botaoContainer} onPress={abrirItem}>
-                        <Text style={estiloInicial.botaoTexto}>Item</Text>
-                </TouchableOpacity>
+                
             
             </View>
         </View>

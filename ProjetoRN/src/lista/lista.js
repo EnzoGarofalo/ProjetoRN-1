@@ -13,6 +13,7 @@ const Lista = ({data}) => {
 
             <Text style={estiloLista.autor}> {item.autor}</Text>
         </View>
+
     )
 }
 
