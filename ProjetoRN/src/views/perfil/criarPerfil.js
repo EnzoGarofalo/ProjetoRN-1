@@ -75,8 +75,8 @@ class criarPerfil extends Component{
                         </View>
                         <View style={styles.inputGroup}>
                             <TextInput 
-                                    placeholder={'idade'}
-                                    value={this.state.Idade}
+                                    placeholder={'Idade'}
+                                    value={this.state.idade}
                                     onChangeText={(val) => this.inputValueUpdate(val, 'idade')}
                              />       
                         </View>
@@ -115,14 +115,11 @@ class criarPerfil extends Component{
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    padding: 35,
-    backgroundColor: '#00171F',
-    color: '#fff',
-    fontSize: 15
+    padding: 35
   },
   inputGroup: {
     flex: 1,
-    padding: 25,
+    padding: 0,
     marginBottom: 15,
     borderBottomWidth: 1,
     borderBottomColor: '#cccccc',
@@ -134,7 +131,7 @@ const styles = StyleSheet.create({
     bottom: 0,
     position: 'absolute',
     alignItems: 'center',
-    justifyContent: 'center',
+    justifyContent: 'center'
   }
 })
 
