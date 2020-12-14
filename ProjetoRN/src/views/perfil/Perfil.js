@@ -62,13 +62,6 @@ class Perfil extends Component {
 
          return(
              <View>
-                    <Button 
-                        title="Adicionar Perfil"
-                        onPress={() => this.props.navigation.navigate('criarPerfil')}
-                        color="#841584"
-                        accessibilityLabel="Learn more about this purple button"
-                    />
-         
                      <ScrollView style={style.container}>
                         {
                             this.state.userArr.map((item,  i) => { 
@@ -88,6 +81,12 @@ class Perfil extends Component {
                             })
                         }
                     </ScrollView>
+                    <Button 
+                        title="Adicionar Perfil"
+                        onPress={() => this.props.navigation.navigate('criarPerfil')}
+                        color="#841584"
+                        accessibilityLabel="Learn more about this purple button"
+                    />
             </View>
          );
     }

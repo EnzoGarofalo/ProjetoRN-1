@@ -9,11 +9,11 @@ class criarPerfil extends Component{
     super();
     this.dbRef = firebase.firestore().collection('Alunos');
         this.state = {
-            nome: ' ',
-            idade: ' ',
-            tecnico: ' ',
-            rm: ' ',
-            sala: ' ',
+            nome: '',
+            idade: '',
+            tecnico: '',
+            rm: '',
+            sala: '',
             isLoading: false
         };
     }
@@ -38,11 +38,11 @@ class criarPerfil extends Component{
                 sala: this.state.sala
             }).then((res) => {
             this.setState({
-                nome: ' ',
-                idade: ' ',
-                tecnico: ' ',
-                rm: ' ',
-                sala: ' ',
+                nome: '',
+                idade: '',
+                tecnico: '',
+                rm: '',
+                sala: '',
                 isLoading: false,
             });
             this.props.navigation.navigate('Perfil')
